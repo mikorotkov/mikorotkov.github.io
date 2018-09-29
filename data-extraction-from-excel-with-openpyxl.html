@@ -17,7 +17,7 @@
     <link rel="canonical" href="https://mikorotkov.github.io/data-extraction-from-excel-with-openpyxl.html" />
     
     
-    <title>Michael Korotkov | Data, quality and managment</title>
+    <title>How to extract data from multiple excel files into csv with Python?</title>
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="/images/favicon/data.ico">
@@ -147,144 +147,113 @@
                                     <br>
                                     <p>So often you find yourself needing to extract some sort of data from excel sheet and into the csv to use it as an input for the database, analysis or visualizytion tool etc. It also helps to get read of that formulas which makes workbooks very slow. Technically speaking this is the first step in what is called ETL - Extract, Transform and Load.</p>
                                     <br>
-                                    <p>There's a great library for python called openpyxl, that can be used for this exact purpose. However as a non-technical guy I found myself struggling to find examples of code that as a little more complicated stuff than examples in the documentation. A great resource for this is this book, but some of the parts of the code that is used in the examples is deprecated, so it's not a copy-paste solution. </p>
+                                    <p>There's a great library for python called openpyxl, that can be used for this exact purpose. However as a non-technical guy I found myself struggling to find examples of code that as a little more complicated stuff than examples in the documentation. A great resource for this is this <a href="http://automatetheboringstuff.com/">book</a>, but some of the parts of the code that is used in the examples is deprecated, so it's not a copy-paste solution. </p>
                                     <br>
                                     <p>The following code is. At least for the time being. So feel free to re-use it and improve it. You can find the github link at the end. I tried my best to separate the code into modules and explain each and every one of them in the human language, so that you can use it and adjust it without the need for a deep technical understaning, although you will probably need to google some stuff if you are a complete beginner. So lets start.</p>
                                     <br>
-                                    <p>You obviously will need Python installed on your computer (I used Python 3) and pip working. Here are great step by step guides on how to do it. Once this is out of the way, you need to install openpyxl librarydon't worry it's not some sort of program you usually install in Windows it's just a bunch of functions already created by developers to manipulate Excel sheets to make our life easier. Your admin will never even notice). It's super easy:</p>
-                                    <ul>
-                                      <li>Press Win + R</li>
-                                      <li>Type CMD in the run window which has opened</li>
-                                      <li>Copy/paste the following command and press enter</li>
-                                    </ul>
-                                                                  
-                                  
-                                  <!-- Post Coding (SyntaxHighlighter) Start -->
-                                  <div class="margin-top-40 margin-bottom-40">  
-                                   <pre class="brush: js">
-                                   /* Smooth Scroll */
-
-                                    $('a.smoth-scroll').on("click", function (e) {
-                                      var anchor = $(this);
-                                      $('html, body').stop().animate({
-                                      scrollTop: $(anchor.attr('href')).offset().top - 50
-                                      }, 1000);
-                                      e.preventDefault();
-                                     });
-				 
-                                   /* Scroll To Top */
-		
-                                   $(window).scroll(function(){
-                                     if ($(this).scrollTop() >= 500) {
-                                     $('.scroll-to-top').fadeIn();
-                                     } else {
-                                     $('.scroll-to-top').fadeOut();
-                                     }
-                                     });
-	
-	                               $('.scroll-to-top').click(function(){
-                                   $('html, body').animate({scrollTop : 0},800);
-                                   return false;
-                                    });
-                                  </pre>
-                                 </div>
-                                 <!-- Post Coding (SyntaxHighlighter) End -->
-                                 
-                                  
-                                  
-                                  <div class="post-title">
-                                    <h2>How to implement?</h2> 
-                                   </div>
-                                   
-                                   
-                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam at orci commodo hendrerit vitae nec eros. Vestibulum neque est, imperdiet nec tortor nec, tempor semper metus. Cras vel tempus velit, et accumsan nisi. Duis laoreet pretium ultricies. Curabitur rhoncus auctor nunc congue sodale Sed posuere nisi ipsum.</p>
-                                   
+                                    <p>You can find the link to github <a href="">repo</a> for the full version of the code. I tried my best to separate the code into modules and explain each of them, so that you can use it and adjust it.</p>
+                                    
+                                    <div class="post-title">
+                                      <h2>Setup and naming convention</h2> 
+                                     </div>
                                      
-                                  
+                                     
+                                     <p>The purpose of the script is to open number of workbooks (which follow a certain naming convention and internal structure for each sheet) extract data from particular sheets and particular columns. </p>
+                                  <p>The naming convention for the files I go through to extract the data and this convention plays an import role in the script. File name consists of the word <em>"source_file_"</em> + country name. Here's an example:</p>
+                                     <li>
+                                       <ul>source_file_Austria</ul>
+                                       <ul>source_file_Germany</ul>
+                                     </li>
+
+                                     <p>Apart from data sheets workbook contains summary sheet, example sheet and a sheet with pivot table. I exclude this 3 sheets, because they don’t contain the data I need. Each data sheet has a following structure:</p>
                                   
                                   <!-- Post Image Gallery Start -->
                                   <div class="row margin-top-40 margin-bottom-40">
                                  
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                      <a href="/images/blog/7.jpg" class="image-popup" title="image Title">
-                                      <img src="/images/blog/7.jpg" class="img-responsive" alt="">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                      <a href="/images/blog/example_of_excel_file.jpg" class="image-popup" title="Example of excel file to extract data from">
+                                      <img src="/images/blog/example_of_excel_file.jpg" class="img-responsive" alt="Example of excel file to extract data from">
                                      </a>
                                     </div>
-                    
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                      <a href="/images/blog/5.jpg" class="image-popup" title="image Title">
-                                      <img src="/images/blog/5.jpg" class="img-responsive" alt="">
-                                     </a>
-                                    </div>
-                    
-                                   <div class="col-md-4 col-sm-6 col-xs-12">
-                                     <a href="/images/blog/6.jpg" class="image-popup" title="image Title">
-                                     <img src="/images/blog/6.jpg" class="img-responsive" alt="">
-                                    </a>
-                                   </div>
-                                
+
                                  </div>
                                  <!-- Post Image Gallery End -->
+                                 <div class="post-title">
+                                    <h2>Step 1 - preparing to read from input files and into output csv</h2> 
+                                   </div>
+
+                                 <p>First of all I define all the variables I will be using:
+                                    <li>
+                                        <ul>Current date and time and second line format it to show in the format: Year-month-day</ul>
+                                        <ul>A path to the folder where your excel sheets are stored and where the output file will be stored as well</ul>
+                                        <ul>I give the first part of the file name, based on the naming convention</ul>
+                                        <ul>Define a dictionary, because for my purpose I will also need id that is associated with each country (the number. E.g. id of Austria is 9, id of Germany is 1, etc. Of course it can also be replaced with the dictionary (which will also require changing all related to country id later in the script)</ul>
+                                      </li>
+                                  </p>
+                                  
+                                     <!-- Post Coding (SyntaxHighlighter) Start -->
+                                  <div class="margin-top-40 margin-bottom-40">  
+                                   <pre class="brush: python">
+                                      import openpyxl
+                                      import csv
+                                      import datetime
+                                      from babel.numbers import format_decimal
+                                      now=datetime.datetime.now()
+                                      cur_date=now.strftime("%Y%m%d")
+                                      
+                                      #dictionary for iterating between files 
+                                      countries={9:"Austria", 6:"France", 1:"Germany", 11:"Italy"}
+                                      path='C:\\Michael\\Documents\\'
+                                      input_file='source_file_'
+                                  </pre>
+                                 </div>
+                                 <!-- Post Coding (SyntaxHighlighter) End -->
+                                 
+                                  <p>Next output file with predefined columns created/emptied if exists. Output file will be created in the same folder as input files (since I use the same path variable) and will have a current date in the name, followed by <em>"_output"</em>. Number of columns and their names are specified in the last line and can be changed.</p>
+                                  
+                                  <div class="margin-top-40 margin-bottom-40">  
+                                      <pre class="brush: python">
+                                          with open(path + cur_date +'_output'+ '.csv', 'w', newline='') as csvfile:
+                                          filewriter = csv.writer(csvfile, delimiter=',',
+                                                                  quotechar='|', quoting=csv.QUOTE_MINIMAL)
+                                          filewriter.writerow(['Sheet Name', 'Date', 'Cost', 'CountryId'])
+                                     </pre>
+                                    </div>
+                                    <div class="post-title">
+                                        <h2>Step 2 - iterating through sheets</h2> 
+                                       </div>
+                                     
+                                  <p>Now the looping through countries is performed. The workbook is opened in read-only mode (it's faster if you have a very big workbook and it doesn't matter since we are only going to read from it anyway). In the variable sheets names of all the sheets in currently opened workbook are saved.</p>
+                                  <p>This is a stage where these 3 sheets, mentioned earlier, that don’t contain any valuable data are excluded. This part can be excluded all together if you want to include data from all the sheets or replaced by some sort of filtering based on your specific conditions. In the given case these 3 sheets are filtered based on their name (you can change the names in brackets to any value you want to filter).</p>
+                                  <div class="margin-top-40 margin-bottom-40">  
+                                      <pre class="brush: python">
+                                          for c_id, country in countries.items():
+                                              #open the workbook
+                                              started=datetime.datetime.now().strftime("%H:%M")
+                                              wb = openpyxl.load_workbook(path + input_file + country + '.xlsx',read_only=True, data_only=True)
+
+                                              sheets =  wb.sheetnames #list of sheet names
+
+                                              #removing 3 sheets sheets - 2 very first sheets in the file and the last one 
+                                              i=0
+                                              while i <=1:
+                                                  popped = sheets.pop(0)
+                                                  i+=1
+                                              sheets.pop()
+                                     </pre>
+                                    </div>
                                  
                                 
                                 
                                   <div class="post-title">
-                                    <h2>Make it more awesome</h2> 
+                                    <h2>Step 3 - extracting the data</h2> 
                                    </div>
                                    
                                    
-                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam at orci commodo hendrerit vitae nec eros. Vestibulum neque est.</p>
-                                 
-                                   
-                                  
-                                  <!-- Post Blockquote (Italic Style) Start -->
-                                  <blockquote class="margin-top-40 margin-bottom-40">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam at orci commodo hendrerit vitae nec eros. Vestibulum neque est, imperdiet nec tortor nec, tempor semper metus. Cras vel tempus velit, <b>et accumsan nisi</b>. Duis laoreet pretium ultricies. Curabitur rhoncus auctor nunc congue sodale Sed posuere nisi ipsum.</p>
-                                   </blockquote>
-                                   <!-- Post Blockquote (Italic Style) End -->
-                                   
+                                   <p>So now we start iterating from all the sheets and create all the necessary variable we will use further.</p>
                                    
                                   
                                   
-                                  <div class="post-title">
-                                    <h2>Learn to check all the features</h2> 
-                                   </div>
-                                   
-                                   
-                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam at orci commodo hendrerit vitae nec eros. Vestibulum neque est.</p>
-                                 
-                                   
-                                  
-                                  <!-- Post List Style Start -->
-                                  <div class="list">
-                                   <ul>
-                                     <li>Ready to use Blog Template</li>
-                                     <li>It have all the necessary features which you need to run blog</li>
-                                     <li>Neat and Clean Typography</li>
-                                     <li>Speed Optimization</li>
-                                    </ul>
-                                   </div>
-                                   
-                                   
-                                  <div class="list list-style margin-top-40">
-                                   <ul>
-                                     <li>Ready to use Blog Template</li>
-                                     <li>It have all the necessary features which you need to run blog</li>
-                                     <li>Neat and Clean Typography</li>
-                                     <li>Speed Optimization</li>
-                                    </ul>
-                                   </div>
-                                   
-                                   
-                                  <div class="list list-style-2 margin-top-40">
-                                   <ul>
-                                     <li>Ready to use Blog Template</li>
-                                     <li>It have all the necessary features which you need to run blog</li>
-                                     <li>Neat and Clean Typography</li>
-                                     <li>Speed Optimization</li>
-                                    </ul>
-                                   </div>
-                                   <!-- Post List Style End -->
 
                                   
                                   
