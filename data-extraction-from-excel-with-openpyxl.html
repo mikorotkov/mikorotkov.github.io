@@ -160,19 +160,22 @@
                                      
                                      <p>The purpose of the script is to open number of workbooks (which follow a certain naming convention and internal structure for each sheet) extract data from particular sheets and particular columns. </p>
                                   <p>The naming convention for the files I go through to extract the data and this convention plays an import role in the script. File name consists of the word <em>"source_file_"</em> + country name. Here's an example:</p>
-                                     <li>
-                                       <ul>source_file_Austria</ul>
-                                       <ul>source_file_Germany</ul>
-                                     </li>
-
+                                     
+                                  <div class="list">
+                                    <ul>
+                                      <li>source_file_Austria</li>
+                                      <li>source_file_Germany</li>
+                                     </ul>
+                                    </div>
+ 
                                      <p>Apart from data sheets workbook contains summary sheet, example sheet and a sheet with pivot table. I exclude this 3 sheets, because they don’t contain the data I need. Each data sheet has a following structure:</p>
                                   
                                   <!-- Post Image Gallery Start -->
                                   <div class="row margin-top-40 margin-bottom-40">
                                  
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                      <a href="/images/blog/example_of_excel_file.jpg" class="image-popup" title="Example of excel file to extract data from">
-                                      <img src="/images/blog/example_of_excel_file.jpg" class="img-responsive" alt="Example of excel file to extract data from">
+                                      <a href="/images/blog/example_of_excel_file.JPG" class="image-popup" title="Example of excel file to extract data from">
+                                      <img src="/images/blog/example_of_excel_file.JPG" class="img-responsive" alt="Example of excel file to extract data from">
                                      </a>
                                     </div>
 
@@ -183,14 +186,16 @@
                                    </div>
 
                                  <p>First of all I define all the variables I will be using:</p>
-                                    <li>
-                                        <ul>Current date and time and second line format it to show in the format: Year-month-day</ul>
-                                        <ul>A path to the folder where your excel sheets are stored and where the output file will be stored as well</ul>
-                                        <ul>I give the first part of the file name, based on the naming convention</ul>
-                                        <ul>Define a dictionary, because for my purpose I will also need id that is associated with each country (the number. E.g. id of Austria is 9, id of Germany is 1, etc. Of course it can also be replaced with the dictionary (which will also require changing all related to country id later in the script)</ul>
-                                      </li>
-                                  
-                                  
+
+                                 <div class="list">
+                                  <ul>
+                                    <li>Current date and time and second line format it to show in the format: Year-month-day</li>
+                                    <li>A path to the folder where your excel sheets are stored and where the output file will be stored as well</li>
+                                    <li>I give the first part of the file name, based on the naming convention</li>
+                                    <li>Define a dictionary, because for my purpose I will also need id that is associated with each country (the number. E.g. id of Austria is 9, id of Germany is 1, etc. Of course it can also be replaced with the dictionary (which will also require changing all related to country id later in the script)</li>
+                                   </ul>
+                                  </div>
+ 
                                      <!-- Post Coding (SyntaxHighlighter) Start -->
                                   <div class="margin-top-40 margin-bottom-40">  
                                    <pre class="brush: python">
