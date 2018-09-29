@@ -755,9 +755,9 @@ blockquote {
 }
 
 .list li {
-    font-size: 18px;
+    /*font-size: 18px;*/
     color: #333333;
-    font-weight: 400;
+    /*font-weight: 400;*/
     margin-bottom: 10px;
 }
 
