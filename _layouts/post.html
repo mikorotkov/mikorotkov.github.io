@@ -1,0 +1,35 @@
+---
+layout: base 
+---
+
+<div class="post">
+  <h2 class="post-title">{{ page.title }}</h2>
+  <div class="post-line"></div>
+
+  {{ content }}
+
+</div>
+<div> Tech: 
+<small>
+    {% for tag in page.tags %}
+    <a href="/tags/{{ tag }}/">{{ tag }}, </a>
+    {% endfor %}
+</small>
+</div>
+<div> Employer: 
+    <small>
+        {% for category in page.categories %}
+        <a href="/employer/{{ category }}/">{{ category }}</a>
+        {% endfor %}
+    </small>
+    </div>
+<div class="pagination">
+  {% if page.next.url %}
+    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left next">Prev</a>
+  {% endif %}
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right next">Next</a>
+  {% endif %}
+
+  <a href="#" class="top">Top</a>
+</div>
