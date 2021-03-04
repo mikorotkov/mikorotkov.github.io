@@ -51,6 +51,16 @@ ul {
   padding-left:50px
 }
 
+#tech{
+  font-size: 14px;
+  font-family: $sans-serif;
+}
+
+#company{
+  font-size: 14px;
+  font-family:  $sans-serif;
+}
+
 h3{
   color: #A57548
 }
@@ -58,6 +68,7 @@ h3{
 a {
   color: #3250e4;
   text-decoration: none;
+  font-family:  $sans-serif;
 }
 
 a:hover {
@@ -88,4 +99,30 @@ img {
 
 td {
   vertical-align: top;
+  text-align: center;
+}
+
+.tag-size-5 {
+  font-size: 1.25rem;
+  font-family:  $sans-serif;
+}
+
+.tag-size-4 {
+  font-size: 1.10rem;
+  font-family:  $sans-serif;
+}
+
+.tag-size-3 {
+  font-size: 0.95rem;
+  font-family:  $sans-serif;
+}
+
+.tag-size-2 {
+  font-size: 0.80rem;
+  font-family:  $sans-serif;
+}
+
+.tag-size-1 {
+  font-size: 0.75rem;
+  font-family:  $sans-serif;
 }
