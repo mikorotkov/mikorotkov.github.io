@@ -9,20 +9,25 @@ layout: base
   {{ content }}
 
 </div>
-<div> Tech: 
+<span id='tech'> Tech: </span>
 <small>
     {% for tag in page.tags %}
-    <a href="/tags/{{ tag }}/">{{ tag }}, </a>
+    {% assign last_tag = page.tags | last %}
+    {% if tag != last_tag %}
+    <a href="/tags/{{ tag | downcase }}/">{{ tag | replace:'-', ' '}}, </a>
+    {% else %}
+    <a href="/tags/{{ tag | downcase }}/">{{ tag | replace:'-', ' '}} </a>
+    {% endif %}
     {% endfor %}
 </small>
-</div>
-<div> Employer: 
+<br/>
+<span id='company'> Company: </span>
     <small>
         {% for category in page.categories %}
-        <a href="/employer/{{ category }}/">{{ category }}</a>
+        <a href="/companies/{{ category | downcase }}/">{{ category }}</a>
         {% endfor %}
     </small>
-    </div>
+    
 <div class="pagination">
   {% if page.next.url %}
     <a href="{{ page.next.url | prepend: site.baseurl }}" class="left next">Prev</a>
