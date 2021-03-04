@@ -61,12 +61,52 @@ I like to automate and reduce annoying things.
 <br/>
 
 # Skills
+
+<table>
 {% assign tags = site.tags | sort %}
-{% for tag in tags %}
- <span class="site-tag">
-    <a href="/tags/{{ tag | first | slugify | capitalize }}/"
-        style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
-            {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+{% capture site_tags %}{% for tag in site.tags %}{{ tag[1].size }}#{{ tag | first | downcase }}#{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_hashes = site_tags | split:',' %}
+
+
+{% tablerow hash in tag_hashes  cols:3 limit:10 %}
+  {% assign keyValue = hash | split: '#' %}
+  {% capture tag_word %}{{ keyValue[2] | strip_newlines }}{% endcapture %}
+
+  <span class="site-tag">
+    <a href="/tags/{{ tag_word | first | slugify | downcase }}/"
+        style="font-size: {{ site.tags[tag_word].size  |  times: 4 | plus: 80  }}%">
+            {{ tag_word | replace:'-', ' ' }} ({{ site.tags[tag_word].size  }})
     </a>
 </span>
+
+{% endtablerow %}
+</table>
+
+# Test
+
+<table>
+{% capture tags %}
+{% for tag in site.tags %}
+{{ tag[1].size | plus: -10000 }}###{{ tag[0] | replace: ' ', '##' }}###{{ tag[1].size }}
 {% endfor %}
+{% endcapture %}
+{% assign sorted_tags = tags | split: ' ' | sort %}
+
+
+{% tablerow sorted_tag in sorted_tags  cols:3 limit:10 %}
+{% assign items = sorted_tag | split: '###' %}
+{% assign tag = items[1] | replace: '##', ' ' %}
+{% assign count = items[2] | plus: 0 %}
+{% if count > 5 %}
+{% assign size = 5 %}
+{% else %}
+{% assign size = count %}
+{% endif %}
+<span class="tag-size-{{ size }}">
+<a class="tag-link" href="/blog/tag/{{ tag | slugify }}" rel="tag">{{ tag | replace:'-', ' ' }}</a> ({{ count }})
+</span>
+
+
+{% endtablerow %}
+</table>
+
