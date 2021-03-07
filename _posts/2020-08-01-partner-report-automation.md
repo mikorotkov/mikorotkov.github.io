@@ -15,6 +15,8 @@ this data.
 
 ## Techique
 Together with marketing channel owner I defined KPIs and metrics that are needed and therefore data that needs to be exposed in the API by the partner.
+
 Based on out requirements partner implemented the API. Data was further cleaned, processed and aggeregated throtugh Microsoft SSIS.
+
 Based on this data, as well as data from CRM provider and internal site data, report in Power BI was created based on the requirements of the marketing channel owner.
 
