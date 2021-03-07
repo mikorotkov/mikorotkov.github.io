@@ -8,17 +8,13 @@ categories: Experteer
 tags: Power-BI
 ---
 
-## Partner reporting automation
-A lot of reports are in different formats (Excel, Salesforce, Metabase etc.) and not centralized. I lead the team that
-migrated reports from different platforms, adjusted data visualization for Power BI and rolled out the new tool across
-the company.  
+## Goal
+A lot of reports were in different formats (Excel, Salesforce, Metabase etc.) and there was no centralized reporting platform for the organization. The goal was to have one centralized reporting platform (hosted in the cloud), where all reports for the organization can be found.
 
 
 ## Techique
-I wrote that I used python to run the project.  
-You just need to describe how you made it.  
+First I did a research of various solutions offered and concluded that Microsoft Power BI fits the requirements better than competitiors.
 
+I then started the migration of reports establishing and documenting the process for the team. After that I was able to educate the team and lead the to not only migrate the reports, but also adjust visualtisation for new platform to present data in a more comprehensive way.
 
-## Duration 
-You can enter the period in a convenient format.   
-You may specify only the duration of your work, assuming that you create a start date in the filename.  
+I then developed workshops for different departments in the company to get them acquinted with new platform. Team that was lead by me successfully rolled out the new tool across the organization and is now 100% adopted by all the users.

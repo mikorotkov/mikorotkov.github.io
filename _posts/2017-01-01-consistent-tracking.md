@@ -24,7 +24,3 @@ addressed:
 - Tag manager's tags, triggers and variables revised, documented and brought to common convention
 - Implementation of new and missing content groups, channel groupings and filters in Google Analytics 
 
-
-## Duration 
-You can enter the period in a convenient format.   
-You may specify only the duration of your work, assuming that you create a start date in the filename.  

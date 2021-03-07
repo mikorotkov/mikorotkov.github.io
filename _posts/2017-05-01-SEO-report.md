@@ -15,10 +15,10 @@ SEO report.
 
 
 ## Techique
-I wrote that I used python to run the project.  
-You just need to describe how you made it.  
+1. In coordination with tech team script was created to extract data from Google Search Console and save it as csv on shared drive
+2. The package that I created in SSIS, uploaded the data to staging table in Microsoft SQL Server. Data was then updated in fact table, with integrated check to make sure no duplicates are created.
+3. This data was then pulled into the report file with, transformed and joined with other data sources (such as internal site data) in order to present SEO performance on a daily basis.
 
 
-## Duration 
-You can enter the period in a convenient format.   
-You may specify only the duration of your work, assuming that you create a start date in the filename.  
+
+

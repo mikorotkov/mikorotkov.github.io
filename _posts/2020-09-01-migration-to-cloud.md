@@ -5,7 +5,7 @@ info: "Migration of DWH from SQL Server to Google Big Query"
 tech: Python, Apache Airflow, Google Cloud Platform, Git, Google Composer
 dates: "2020/09 ~ Present"
 categories: Experteer
-tags: Python Apache-Airflow BigQuery Git Google-Composer
+tags: Python Apache-Airflow BigQuery Google-Composer
 ---
 
 ## Migration to Google Big Query
@@ -15,10 +15,4 @@ Apache Airflow.
 
 
 ## Techique
-I wrote that I used python to run the project.  
-You just need to describe how you made it.  
-
-
-## Duration 
-You can enter the period in a convenient format.   
-You may specify only the duration of your work, assuming that you create a start date in the filename.  
+I'm currently in the process of migrating our infrastructure to the Google Cloud platform. As a scheduling tool Apache Airflow was chosen for which I created various data pipelines to process, clean up and load data into data warehouse in BigQuery.

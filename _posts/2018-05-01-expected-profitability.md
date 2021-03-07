@@ -8,17 +8,15 @@ categories: Experteer
 tags: SQL SSIS Excel
 ---
 
-## Expected Profitability Forecast
+## Goal
 The aim was to understand how profitable an investment in particular channel will be over time and determine
 the benchmark/walk-away point for the investment. Historic data was analyzed and model for the forecast was
 prepared. 
 
 
 ## Techique
-I wrote that I used python to run the project.  
-You just need to describe how you made it.  
+When looking at LTV calculation used by the company I identified that calculation didn't take into account future purchases (only renewals of subscriptuions already purchased). Therefore, I created SQL that pulls the historic data for purchases made by clients. 
 
+Then I created a simple model that estimates how many purchases there is going to be from specific registration cohort (and for specific acquisition channel) in different time periods. 
 
-## Duration 
-You can enter the period in a convenient format.   
-You may specify only the duration of your work, assuming that you create a start date in the filename.  
+Based on this we were able to calculate LTV more accurately for each registration cohort taking into consideration future purchases as well. 

@@ -8,17 +8,14 @@ categories: Experteer
 tags: SQL SSIS Excel
 ---
 
-## Expected Profitability Forecast
+## Goal
 The goal was to analyze effect introduction of PayPal had on user behavior in terms of subscription
 cancellations, conversion rate etc. The analysis was presented to the management team and the CEO and
 relevant correcting actions were taken based on the results of the analysis.
 
 
 ## Techique
-I wrote that I used python to run the project.  
-You just need to describe how you made it.  
+Payment with PayPal was enabled at the beginning of the year and management team wanted to see what is the impact of PayPal on purcahses and renewals of subscriptions. Data was pulled with SQL from Microsoft SQL Server and report was created in Excel for analysis. 
 
+I then presented conclusions of the analysis to the management team and CEO.
 
-## Duration 
-You can enter the period in a convenient format.   
-You may specify only the duration of your work, assuming that you create a start date in the filename.  

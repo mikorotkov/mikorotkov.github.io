@@ -10,15 +10,11 @@ tags: SQL SSIS Power-BI
 
 ## Partner reporting automation
 Goal was to integrate data from partner into our own data warehouse and create performance report based on
-this data. Created requirements for API implementation by partner, created ETL process for data integration
-and created the report.  
+this data. 
 
 
 ## Techique
-I wrote that I used python to run the project.  
-You just need to describe how you made it.  
+Together with marketing channel owner I defined KPIs and metrics that are needed and therefore data that needs to be exposed in the API by the partner.
+Based on out requirements partner implemented the API. Data was further cleaned, processed and aggeregated throtugh Microsoft SSIS.
+Based on this data, as well as data from CRM provider and internal site data, report in Power BI was created based on the requirements of the marketing channel owner.
 
-
-## Duration 
-You can enter the period in a convenient format.   
-You may specify only the duration of your work, assuming that you create a start date in the filename.  
