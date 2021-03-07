@@ -2,6 +2,7 @@
   border-top: .5px solid $grey-2;
   font-family: $sans-serif;
   padding-top: 2rem;
+  font-size: 1.1rem;
   position: relative;
   text-align: center;
 
@@ -23,8 +24,8 @@
 
   .next {
     @include transition(all .3s ease-out);
-    color: $default-color;
-    font-size: 0.9rem;
+    
+    font-size: 1.2rem;
     position: absolute;
 
     &:hover,
