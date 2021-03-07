@@ -20,13 +20,7 @@ layout: base
     {% endif %}
     {% endfor %}
 </small>
-<br/>
-<span id='company'> Company: </span>
-    <small>
-        {% for category in page.categories %}
-        <a href="/companies/{{ category | downcase }}/">{{ category }}</a>
-        {% endfor %}
-    </small>
+
     
 <div class="pagination">
   {% if page.next.url %}
