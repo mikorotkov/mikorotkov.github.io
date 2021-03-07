@@ -20,36 +20,29 @@ Professionally I've always been guided by these 4 principles:
 # Career
 
 
-### Experteer GmbH, Munich (2016/04 ~ )
-* **Senior Business intelligence manager** (2020/02 ~ )
-  * Successfully designed and implemented ETL solutions
-  * Administration and maintenance of data warehouse
-  * Oversee the migration of data from legacy systems to new solutions
-* **Business Intelligence Manager** (2018/02 ~ 2020/02)
-  * Successfully led the team in migration of company reporting from Excel to Power BI
-  * Automated update for multiple marketing reports using python, Google Apps script and SSIS
-  * Prepared and presented analysis to the top management in various business functions
-* **Web Analytics Manager** (2016/10 ~ 2018/02)
-  * Successful management of digital analytics and tracking projects
-  * Provided top management with analysis and insights to improve decision making
-* **SEO Intern** (2016/04 ~ 2016/10)
-  * Creation and implementation of tracking, reporting and analysis concepts
-  * Technical & Backlink SEO audit (Screaming Frog, DeepCrawl, Sistrix, Buzzstream)
+### Experteer GmbH, Munich 
+* Design and implementation of ETL solutions to enrich DWH with new data
+* Administration and maintenance of data warehouse (SQL Server)
+* Successful migration from VBA scripts to extraction of data with Python to increase data quality
+* Led the team in migration of company reporting from Excel to Power BI
+* Automated report updates using python, Google Apps script and SSIS
+* Prepared and presented analysis to the top management in various business functions
+* Successful management of digital analytics and tracking projects (Google Tag Manager and Google Analytics)
+* Creation and implementation of tracking, reporting and analysis concepts
+* Technical & Backlink SEO audit (Screaming Frog, DeepCrawl, Sistrix, Buzzstream)
 
 
-### InterNations, Munich (2015/09 ~ 2016/03)
-* **Business Intelligence Intern**
-  * Preparation and optimization of ad-hoc and other reports using MySQL database
-  * Creation and optimization of ETL processes (Pentaho spoon)
+### InterNations, Munich
+* Preparation of ad-hoc analysis and reports using MySQL database
+* Optimization of reports and VBA macros
+* Creation and optimization of ETL processes (Pentaho spoon)
 
 
-###  Israeli Air Force, Israel (2007/05 ~ 2012/05)
-* **Team Manager** (2010/05 ~ 2012/05)
-  * Department management
-  * Responsibility for information security and quality control in the department
-* **Communication and Navigation Technician** (2007/05 ~ 2010/05)
-  * Installation and maintenance of the communication and navigation equipment for the aircraft
-  * Responsibility for expansive equipment and excellent quality of work
+###  Israeli Air Force, Israel
+* Department management
+* Responsible for information security and quality control in the department
+* Installation and maintenance of the communication and navigation equipment for the aircraft
+* Responsibility for expansive equipment and excellent quality of work
 
 <br/>
 
@@ -60,29 +53,7 @@ I like to automate and reduce annoying things.
 
 <br/>
 
-# Skills
-
-<table>
-{% assign tags = site.tags | sort %}
-{% capture site_tags %}{% for tag in site.tags %}{{ tag[1].size }}#{{ tag | first | downcase }}#{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign tag_hashes = site_tags | split:',' %}
-
-
-{% tablerow hash in tag_hashes  cols:3 limit:10 %}
-  {% assign keyValue = hash | split: '#' %}
-  {% capture tag_word %}{{ keyValue[2] | strip_newlines }}{% endcapture %}
-
-  <span class="site-tag">
-    <a href="/tags/{{ tag_word | first | slugify | downcase }}/"
-        style="font-size: {{ site.tags[tag_word].size  |  times: 4 | plus: 80  }}%">
-            {{ tag_word | replace:'-', ' ' }} ({{ site.tags[tag_word].size  }})
-    </a>
-</span>
-
-{% endtablerow %}
-</table>
-
-# Test
+# Technologies
 
 <table>
 {% capture tags %}
@@ -93,7 +64,7 @@ I like to automate and reduce annoying things.
 {% assign sorted_tags = tags | split: ' ' | sort %}
 
 
-{% tablerow sorted_tag in sorted_tags  cols:3 limit:10 %}
+{% tablerow sorted_tag in sorted_tags  cols:3 limit:12 %}
 {% assign items = sorted_tag | split: '###' %}
 {% assign tag = items[1] | replace: '##', ' ' %}
 {% assign count = items[2] | plus: 0 %}
@@ -102,8 +73,8 @@ I like to automate and reduce annoying things.
 {% else %}
 {% assign size = count %}
 {% endif %}
-<span class="tag-size-{{ size }}">
-<a class="tag-link" href="/blog/tag/{{ tag | slugify }}" rel="tag">{{ tag | replace:'-', ' ' }}</a> ({{ count }})
+<span class="tag-size-3">
+<a class="tag-link" href="/blog/tag/{{ tag | slugify }}" rel="tag">{{ tag | replace:'-', ' ' }}</a> 
 </span>
 
 
