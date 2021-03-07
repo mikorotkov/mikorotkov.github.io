@@ -64,7 +64,7 @@ I like to automate and reduce annoying things.
 {% assign sorted_tags = tags | split: ' ' | sort %}
 
 
-{% tablerow sorted_tag in sorted_tags  cols:3 limit:12 %}
+{% tablerow sorted_tag in sorted_tags  cols:3 limit:15 %}
 {% assign items = sorted_tag | split: '###' %}
 {% assign tag = items[1] | replace: '##', ' ' %}
 {% assign count = items[2] | plus: 0 %}
@@ -74,7 +74,7 @@ I like to automate and reduce annoying things.
 {% assign size = count %}
 {% endif %}
 <span class="tag-size-3">
-<a class="tag-link" href="/blog/tag/{{ tag | slugify }}" rel="tag">{{ tag | replace:'-', ' ' }}</a> 
+<a class="tag-link" href="/tags/{{ tag | slugify }}" rel="tag">{{ tag | replace:'-', ' ' }}</a> 
 </span>
 
 
