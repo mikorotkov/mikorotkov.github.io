@@ -8,7 +8,7 @@ categories: Experteer
 tags: Python Apache-Airflow BigQuery Google-Composer
 ---
 
-## Migration to Google Big Query
+## Goal
 Goal is to gain speed and scalability in data processing by migrating to Google cloud solution. This requires
 design of the table relationships, optimization of SQL queries and implementation of ETL data pipelines with
 Apache Airflow.  

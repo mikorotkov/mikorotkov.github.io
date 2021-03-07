@@ -8,7 +8,7 @@ categories: Experteer
 tags: SQL SSIS Power-BI
 ---
 
-## Partner reporting automation
+## Goal
 Goal was to integrate data from partner into our own data warehouse and create performance report based on
 this data. 
 
