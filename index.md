@@ -3,7 +3,7 @@ layout: about
 ---
 
 # About Me
-I came to the digital analytics world with background in electronics, basics in assembly language and some management experience from my time in the air force. Since then I worked on a lot of projects ranging from analysis of marketing campaigns to migration of data warehouse and built quite a portfolio of successful [projects](\portfolio\). Nonetheless, I'm always looking for new technologies to try and new projects to work on.
+I came to the digital analytics world with background in electronics, basics in Assembler language and some management experience from my time in the Air Force. Since then I worked on a lot of projects ranging from analysis of marketing campaigns to migration of data warehouse and built quite a portfolio of successful [projects](\portfolio\). Nonetheless, I'm always looking for new technologies to try and new projects to work on.
 
 Professionally I've always been guided by these 4 principles:
 
