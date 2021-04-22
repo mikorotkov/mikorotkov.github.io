@@ -47,28 +47,28 @@ ul {
   padding: 0.1rem 0.2rem 0.2rem 0.7rem;
 }
 
-#principles{
-  padding-left:50px
+#principles {
+  padding-left: 50px
 }
 
-#tech{
+#tech {
   font-size: 14px;
   font-family: $sans-serif;
 }
 
-#company{
+#company {
   font-size: 14px;
-  font-family:  $sans-serif;
+  font-family: $sans-serif;
 }
 
-h3{
+h3 {
   color: #A57548
 }
 
 a {
   color: #3250e4;
   text-decoration: none;
-  font-family:  $sans-serif;
+  font-family: $sans-serif;
 }
 
 a:hover {
@@ -104,25 +104,29 @@ td {
 
 .tag-size-5 {
   font-size: 1.25rem;
-  font-family:  $sans-serif;
+  font-family: $sans-serif;
 }
 
 .tag-size-4 {
   font-size: 1.10rem;
-  font-family:  $sans-serif;
+  font-family: $sans-serif;
 }
 
 .tag-size-3 {
   font-size: 0.95rem;
-  font-family:  $sans-serif;
+  font-family: $sans-serif;
 }
 
 .tag-size-2 {
   font-size: 0.80rem;
-  font-family:  $sans-serif;
+  font-family: $sans-serif;
 }
 
 .tag-size-1 {
   font-size: 0.75rem;
-  font-family:  $sans-serif;
+  font-family: $sans-serif;
+}
+
+.dropshadowimg {
+  box-shadow: 5px 5px 5px #999;
 }
