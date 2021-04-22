@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Automation of marketing reporting,"
-info: "Automation of marketing reporting,"
+title:  "Automation of marketing reporting"
+info: "Automation of marketing reporting"
 tech: SQL, SSIS, Power BI
 dates: "2019/02 ~ 2019/05" 
 categories: Experteer
