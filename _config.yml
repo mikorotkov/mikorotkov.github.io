@@ -3,6 +3,7 @@ title: MiKorotkov
 baseurl: ""
 url: "https://kssim.github.io"
 google_analytics: # Tracking ID, e.g. "UA-000000-01"
+google_tag_manager: 'GTM-TG8FGPC'
 
 # Author
 author:
