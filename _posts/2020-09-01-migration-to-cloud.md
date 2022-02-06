@@ -3,7 +3,7 @@ layout: post
 title:  "Migration to Google Big Query"
 info: "Migration of DWH from SQL Server to Google Big Query"
 tech: Python, Apache Airflow, Google Cloud Platform, Git, Google Composer
-dates: "2020/09 ~ Present"
+dates: "2020/09 ~ 2021/09"
 categories: Experteer
 tags: Python Apache-Airflow BigQuery Google-Composer
 ---

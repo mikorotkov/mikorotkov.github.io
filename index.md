@@ -19,6 +19,11 @@ Professionally I've always been guided by these 4 principles:
 
 # Career
 
+### Ryte, Munich
+* Definition and implementation of DWH  
+* Definition, implementation and documentation of Business Intelligence processes in the company
+* Migration of reports from legacy systems to reporting hub in Tableau
+
 
 ### Experteer GmbH, Munich 
 * Design and implementation of ETL solutions to enrich DWH with new data
