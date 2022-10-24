@@ -3,7 +3,7 @@ layout: post
 title:  "Creation of Business Intelligence Function in the Company"
 info: "Creation of Business Intelligence Function in the Company"
 tech: Snowflake, dbt, Tableau, Git
-dates: "2021/09 ~ Present"
+dates: "2021/09 ~ 2022/02"
 categories: Ryte
 tags: Snowflake dbt tableau git
 ---
