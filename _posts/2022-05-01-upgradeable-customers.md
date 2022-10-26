@@ -14,5 +14,7 @@ The goal was to identify customers that can have high potential to be upgraded t
 
 ## Techique
 Together with customer support, we identified customers that have the potential to be upgraded by looking at their usage of the platform, their activity, and visit frequency. 
+
 Furthermore, we calculated the potential impact of upgrading the customers to prioritize them based on the ROI. Customers were prioritized based on the potential MRR gained and the list was handed over to sales to reach out to customers.
+
 In addition, a list was structured in a way to show information from and easily link to relevant information in Salesforce and other systems, for the convenience of account managers
