@@ -5,7 +5,7 @@ info: "Implementation of reporting hub with Tableau"
 tech: Tableau, dbt, Git
 dates: "2022/01 ~ 2022/05"
 categories: Ryte
-tags: dbt tableau git
+tags: dbt Tableau git
 ---
 
 ## Goal

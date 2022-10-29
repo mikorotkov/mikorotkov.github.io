@@ -33,7 +33,7 @@ social:
   steam:
   tumblr:
   gitlab:
-  twitter: mikorotkov
+#  twitter: mikorotkov
   vimeo:
   wordpress:
   youtube:
@@ -55,7 +55,7 @@ plugins:
 permalink: /:categories/:slug
 #/:year-:month-:day/:title
 paginate_path: "/portfolio/page:num/"
-paginate: 5
+paginate: 10
 exclude:
   - "Gemfile"
   - "Gemfile.lock"

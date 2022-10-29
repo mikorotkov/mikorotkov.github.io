@@ -5,7 +5,7 @@ info: "Identifying Customers for Upgrade"
 tech: Snowflake, Tableau
 dates: "2022/05 ~ 2022/05"
 categories: Ryte
-tags: Snowflake tableau
+tags: Snowflake Tableau
 ---
 
 ## Goal
