@@ -14,5 +14,5 @@ design of the table relationships, optimization of SQL queries and implementatio
 Apache Airflow.  
 
 
-## Techique
+## Technique
 I'm currently in the process of migrating our infrastructure to the Google Cloud platform. As a scheduling tool Apache Airflow was chosen for which I created various data pipelines to process, clean up and load data into data warehouse in BigQuery.

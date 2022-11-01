@@ -12,7 +12,7 @@ tags: dbt Tableau git
 The goal is to have a central reporting hub for reports in the company  
 
 
-## Techique
+## Technique
 After analyzing the reporting landscape of the company, it became clear that it was difficult for people to discover the data they needed to make a decision. Reports were created in various systems (Google Data Studio, Google Sheets, etc.) and were shared among people unsystematically.
 This hindered the operations of the company because people preferred making gut-feeling decisions and struggled to get the reliable data they needed.
 

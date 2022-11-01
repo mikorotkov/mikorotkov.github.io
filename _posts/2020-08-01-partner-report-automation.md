@@ -13,7 +13,7 @@ Goal was to integrate data from partner into our own data warehouse and create p
 this data. 
 
 
-## Techique
+## Technique
 Together with marketing channel owner I defined KPIs and metrics that are needed and therefore data that needs to be exposed in the API by the partner.
 
 Based on out requirements partner implemented the API. Data was further cleaned, processed and aggeregated throtugh Microsoft SSIS.

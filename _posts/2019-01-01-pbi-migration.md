@@ -12,7 +12,7 @@ tags: Power-BI
 A lot of reports were in different formats (Excel, Salesforce, Metabase etc.) and there was no centralized reporting platform for the organization. The goal was to have one centralized reporting platform (hosted in the cloud), where all reports for the organization can be found.
 
 
-## Techique
+## Technique
 First I did a research of various solutions offered and concluded that Microsoft Power BI fits the requirements better than competitiors.
 
 I then started the migration of reports establishing and documenting the process for the team. After that I was able to educate the team and lead the to not only migrate the reports, but also adjust visualtisation for new platform to present data in a more comprehensive way.

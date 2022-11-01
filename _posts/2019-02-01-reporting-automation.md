@@ -12,7 +12,7 @@ tags: SQL SSIS Python
 Majority of marketing reporting was done manually by copy/pasting data between excel files. The goal was to reduce manual effort needed to keep these reports up to date and consequently reduce amount of errors in the data.
 
 
-## Techique
+## Technique
 I automated the process using various tools depending on the situation.
 Data was extracted with various Python scripts. Clean up and processing of the data was done with Microsoft SSIS and loaded into DWH. 
 This automation project saved around 8 hours of manual work weekly for marketing department.   

@@ -13,7 +13,7 @@ The aim of the project was to reduce complexity of tracking infrastructure by do
 were already done, implementing tracking consistently across the website. The project successfully achieved its goal of making new implementation easier and faster, as well as considerably improving data integrity.
 
 
-## Techique
+## Technique
 During the project following topics were 
 addressed:
 - Alignment on and documentation of custom implementations in Google Analytics across various properties

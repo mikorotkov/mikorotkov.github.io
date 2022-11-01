@@ -12,7 +12,7 @@ tags: Snowflake Tableau
 The goal was to identify customers that can have high potential to be upgraded to a better plan.
 
 
-## Techique
+## Technique
 Together with customer support, we identified customers that have the potential to be upgraded by looking at their usage of the platform, their activity, and visit frequency. 
 
 Furthermore, we calculated the potential impact of upgrading the customers to prioritize them based on the ROI. Customers were prioritized based on the potential MRR gained and the list was handed over to sales to reach out to customers.
