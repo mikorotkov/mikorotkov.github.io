@@ -24,3 +24,17 @@ DWH itself was designed in 3 layers to better control access to sensitive data s
 
 Below is schematic design of DWH developed:
 <img class="dropshadowimg" src="/assets/img/2021-09-01-dwh-design.jpg" alt="DWH design schema" />
+
+<br>
+In addition to technical aspects of the data warehouse implementation, we defined and implemented a process for BI tickets and workflows.
+The process is based on agile principles taking into account constant contact with a stakeholder to consider constantly changing requirements. 
+In the end, we ended up working in weekly sprints to deliver value to the customers fast.
+<img class="dropshadowimg" src="/assets/img/Reporting_workflow.png" alt="Reporting workflow designed" />
+
+Steps:
+1. Create a user story - the definition of metrics and dimensions is not enough to build an actionable report. At some point, a design decision will have to be made and without understanding the goal and the full picture behind the report it will be difficult to make it. Therefore this step is essential
+2. Check data availability - necessary for further steps
+3. Identify priorities - what are KPIs and what are supporting metrics
+4. Agree on naming convention - ensure things are named consistently across the organization and names are understandable to everyone
+5. Agree on deliverables - important for both sides to manage expectations and define the scope of the project
+6. Add tasks to the board - helps in prioritization and to incorporate feedback
